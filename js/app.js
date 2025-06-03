@@ -13,7 +13,7 @@ const createHeader = (page) => {
       <a href="${pathImg}index.html">
         <img
           class="header__logo"
-          src="./assets/icons-svg/Logo-incodecoin.svg"
+          src="${pathImg}/assets/icons-svg/Logo-incodecoin.svg"
           alt="imagen de la empresa In Code Coin"
         />
       </a>
