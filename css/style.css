@@ -54,6 +54,10 @@ section {
   text-align: center;
 }
 
+.header__offcanvas-btn {
+  display: none;
+}
+
 .header__nav {
   flex-grow: 1;
   display: flex;
@@ -114,6 +118,56 @@ footer {
   width: 100%;
 }
 
+/** Estilos CSS OffCanvas **/
+.header__offcanvas {
+  background-color: #faefdc;
+  width: 75%;
+  max-width: 25rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  .header__offcanvas {
+    max-width: 60%;
+  }
+}
+
+/* Estilos del header dentro del offcanvas */
+.header__offcanvas .offcanvas-header {
+  height: 5rem;
+  background-color: #F4D5D3;
+  padding: 1rem;
+  color: #1D0029;
+}
+
+/* Estilos del menú dentro del offcanvas */
+.header__menuOff {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__menuOff-link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #1D0029;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 0.5rem;
+}
+
+.header__menuOff-link:hover {
+  background-color: #F4D5D3;
+  color: #1D0029;
+  font-weight: bold;
+}
+
+/* Espaciado interno del offcanvas */
+.offcanvas-body {
+  padding: 1rem;
+}
+
 @media (max-width: 1000px) {
     main {
         background: #fff;
@@ -131,4 +185,34 @@ footer {
     display: block;
     width: 10rem;
   }
+
+  .header__offcanvas-btn {
+    display: block;
+    width: 2rem;
+  }
+}
+
+/* Estilos del botón solicitar información */
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo primario del botón */
+.button--primary {
+  background-color: #0B172F;
+  color: #fff;
+  border: 0.1rem solid #0B172F;
+}
+
+.button--primary:hover {
+  background-color: #0B172F;
+  transform: scale(1.05);
 }

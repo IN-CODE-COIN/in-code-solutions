@@ -70,3 +70,15 @@ function renderNews(articles) {
 /* Llamamos a la función para mostrar por defecto 3 noticias */
 const themeDefault = "Criptomonedas";
 fetchNews(themeDefault, 6); //* Theme = "Criptomonedas" || Límite de noticias = 6 *//
+
+const page = "Noticias";
+
+// Seleccionar el header y el footer de forma segura
+const headerElement = document.querySelector(".header");
+const footerElement = document.querySelector(".footer");
+
+// Verificar si existe antes de insertar
+if (headerElement && footerElement) {
+  headerElement.insertAdjacentHTML("beforeend", createHeader(page));
+  footerElement.insertAdjacentHTML("beforeend", createFooter(page));
+}

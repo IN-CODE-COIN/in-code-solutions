@@ -42,24 +42,29 @@ document.addEventListener("DOMContentLoaded", () => {
   servicesContainer.innerHTML = services
     .map(
       (service) => `
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <div class="card__header">
         <img src="${service.img}" class="img-fluid" alt="${service.name}">
       </div>
       <div class="card-body card__body">
-        <h5 class="card-title"><strong>${service.name}</strong></h5>
-        <p class="card-text">${service.description}</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        ${service.ventajas
-          .map((ventaja) => `<li class="list-group-item">${ventaja}</li>`)
-          .join("")}
-      </ul>
-      <div class="card-footer card__footer">
-        <a href="${service.url}" class="card__footer-link"> Ver más </a>
+        <h5 class="card__body-title card-title"><strong>${service.name}</strong></h5>
+        <p class="card__body-text card-text">${service.description}</p>
+        <a href="${service.url}" class="card__body-link button button--primary"> Ver más </a>
       </div>
     </div>
   `
     )
     .join("");
 });
+
+const page = "Inicio";
+
+// Seleccionar el header y el footer de forma segura
+const headerElement = document.querySelector(".header");
+const footerElement = document.querySelector(".footer");
+
+// Verificar si existe antes de insertar
+if (headerElement && footerElement) {
+  headerElement.insertAdjacentHTML("beforeend", createHeader(page));
+  footerElement.insertAdjacentHTML("beforeend", createFooter(page));
+}
