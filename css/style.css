@@ -195,7 +195,7 @@ footer {
 /* Estilos del botón solicitar información */
 .button {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: bold;
   margin-top: 1rem;
   padding: 0.5rem 1rem;

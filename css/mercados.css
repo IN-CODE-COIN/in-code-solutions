@@ -112,3 +112,38 @@
     font-size: 0.7rem;
   }
 }
+
+/* Oculta los radio buttons */
+.btn-check {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Base del toggle como botón moderno */
+.toggle-button {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  border: 0.1rem solid #0B172F;
+  color: #0B172F;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+/* Hover */
+.toggle-button:hover {
+  background-color: #0B172F10;
+  transform: scale(1.05);
+}
+
+/* Estado activo */
+.btn-check:checked + .toggle-button {
+  background-color: #0B172F;
+  color: #fff;
+  transform: scale(1.05);
+}
