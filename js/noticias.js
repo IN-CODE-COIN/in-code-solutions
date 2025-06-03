@@ -48,7 +48,7 @@ function renderNews(articles) {
           <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">${description}</p>
-              <a href="${url}" target="_blank" class="card-link">Ir a la noticia</a>
+              <a href="${url}" target="_blank" class="card__body-link button button--primary">Ir a la noticia</a>
           </div>
           <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong>Fecha:</strong> ${
