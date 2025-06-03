@@ -100,7 +100,7 @@ footer {
   align-items: center;
 }
 
-.footer__text {
+.footer__text, footer p {
   margin: 0;
   padding: 0
 }
