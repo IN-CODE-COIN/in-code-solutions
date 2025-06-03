@@ -69,7 +69,7 @@ const createHeader = (page) => {
         <h4 class="offcanvas-title" id="headerOffcanvas${page}Label">Menu</h4>
         <button
           type="button"
-          class="btn-close"
+          class="btn-close button--close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>

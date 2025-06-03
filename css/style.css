@@ -102,7 +102,13 @@ footer {
 
 .footer__text, footer p {
   margin: 0;
-  padding: 0
+  padding: 0;
+  font-weight: bold;
+}
+
+.footer__legal a{
+  text-decoration: none;
+  color: white;
 }
 
 .title__section {
@@ -120,7 +126,7 @@ footer {
 
 /** Estilos CSS OffCanvas **/
 .header__offcanvas {
-  background-color: #faefdc;
+  background-color: #f4f4f4;
   width: 75%;
   max-width: 25rem;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -135,9 +141,9 @@ footer {
 /* Estilos del header dentro del offcanvas */
 .header__offcanvas .offcanvas-header {
   height: 5rem;
-  background-color: #F4D5D3;
+  background-color: #1D0029;
   padding: 1rem;
-  color: #1D0029;
+  color: #f4f4f4;
 }
 
 /* Estilos del menú dentro del offcanvas */
@@ -158,14 +164,18 @@ footer {
 }
 
 .header__menuOff-link:hover {
-  background-color: #F4D5D3;
-  color: #1D0029;
+  background-color: #1D0029;
+  color: #F4D5D3;
   font-weight: bold;
 }
 
 /* Espaciado interno del offcanvas */
 .offcanvas-body {
   padding: 1rem;
+}
+
+.button--close {
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 1000px) {
