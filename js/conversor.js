@@ -118,7 +118,9 @@ function convertCurrency() {
 
   //* Llamada a la API cuando tenemos los parámetros necesarios *//
   fetch(
-    `https://api.frankfurter.app/latest?base=${selectedBaseCurrency}&symbols=${selectedTargetCurrency}`
+    `https://corsproxy.io/?${encodeURIComponent(
+      `https://api.euroratesapi.dev/api/all-rates?currency=${selectedBaseCurrency}`
+    )}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -129,9 +131,8 @@ function convertCurrency() {
       }
       const rate = data.rates[selectedTargetCurrency];
       const convertedAmount = (amount * rate).toFixed(2);
-      document.getElementById(
-        "result-text"
-      ).textContent = `${amount} ${selectedBaseCurrency} = ${convertedAmount} ${selectedTargetCurrency}`;
+      document.getElementById("result-text").textContent =
+        `${amount} ${selectedBaseCurrency} = ${convertedAmount} ${selectedTargetCurrency}`;
     })
     .catch((error) => {
       console.error("Error al obtener la conversión:", error);
