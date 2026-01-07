@@ -118,9 +118,7 @@ function convertCurrency() {
 
   //* Llamada a la API cuando tenemos los parámetros necesarios *//
   fetch(
-    `https://corsproxy.io/?${encodeURIComponent(
-      `https://api.euroratesapi.dev/api/all-rates?currency=${selectedBaseCurrency}`
-    )}`
+    `https://api.euroratesapi.dev/api/all-rates?currency=${selectedBaseCurrency}`
   )
     .then((response) => response.json())
     .then((data) => {
